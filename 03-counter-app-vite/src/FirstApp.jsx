@@ -1,31 +1,32 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // const getValue = () => {
 //     return 4+4;
 // }
 
-export const FirtsApp = ({title, subtitle, name}) => {
+export const FirstApp = ({title, subtitle, name}) => {
 
 // console.log(props);
 
     return (
         <>
-            <h1>{title}</h1>
+            <h1 data-testid="test-id">{title}</h1>
             {/* <code>{getValue()}</code> */}
-            <p>{subtitle}</p>
+            <h2>{subtitle}</h2>
             <a>{name}</a>
         </>
     )
 }
 
 
-FirtsApp.propTypes = {
+FirstApp.propTypes = {
     title: PropTypes.string.isRequired,
-    subtitle: PropTypes.number
+    subtitle: PropTypes.string
 }
 
-FirtsApp.defaultProps = {
+FirstApp.defaultProps = {
     name: 'Alex Carrera',
-    subtitle: 124,
+    subtitle: 'No hay subtitulo',
     title: 'No hay titulo',
 }
